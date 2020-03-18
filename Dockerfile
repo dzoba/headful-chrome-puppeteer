@@ -37,4 +37,5 @@ USER pptruser
 
 # CMD ["google-chrome-unstable"]
 
+COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
