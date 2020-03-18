@@ -7,7 +7,10 @@ Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 &
 export DISPLAY=:99.0
 # export PUPPETEER_EXEC_PATH="google-chrome-stable"
 
-sudo chown -R pptruser:pptruser /github/workspace
+# sudo chown -R pptruser:pptruser /github/workspace
+sh -c "sudo chown -R pptruser:pptruser /github"
+sh -c "sudo chmod -R pptruser:pptruser /github"
+
 
 echo "Inside The Docker Container"
 
