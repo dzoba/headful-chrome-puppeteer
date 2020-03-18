@@ -1,0 +1,5 @@
+name: 'Headful Chrome Puppeteer'
+description: 'Run Puppeteer on Github Actions With Chrome'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
