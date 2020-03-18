@@ -32,7 +32,7 @@ RUN npm i puppeteer \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /node_modules \
     && mkdir /github \
-    && chown -R pptruser:pptruser /github
+    && chown -R pptruser:pptruser /github/workspace
 
 # Run everything after as non-privileged user.
 USER pptruser
