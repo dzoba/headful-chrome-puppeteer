@@ -35,4 +35,6 @@ RUN npm i puppeteer \
 # Run everything after as non-privileged user.
 USER pptruser
 
-CMD ["google-chrome-unstable"]
+# CMD ["google-chrome-unstable"]
+
+ENTRYPOINT ["/entrypoint.sh"]
