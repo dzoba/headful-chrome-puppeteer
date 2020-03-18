@@ -31,6 +31,7 @@ RUN npm i puppeteer \
     && mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /node_modules \
+    && mkdir /github \
     && chown -R pptruser:pptruser /github
 
 # Run everything after as non-privileged user.
