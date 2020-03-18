@@ -24,20 +24,20 @@ RUN apt-get update \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Install puppeteer so it's available in the container.
-RUN npm i puppeteer \
-    # Add user so we don't need --no-sandbox.
-    # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-    && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-    && mkdir -p /home/pptruser/Downloads \
-    && chown -R pptruser:pptruser /home/pptruser \
-    && chown -R pptruser:pptruser /node_modules 
+# RUN npm i puppeteer \
+#     # Add user so we don't need --no-sandbox.
+#     # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
+#     && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
+#     && mkdir -p /home/pptruser/Downloads \
+#     && chown -R pptruser:pptruser /home/pptruser \
+#     && chown -R pptruser:pptruser /node_modules 
 
 # RUN mkdir -p /github \
 #     chown -R pptruser:pptruser /github \
 #     && chmod -R pptruser:pptruser /github 
 
 # Run everything after as non-privileged user.
-USER pptruser
+# USER pptruser
 
 # CMD ["google-chrome-unstable"]
 
